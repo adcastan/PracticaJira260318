@@ -114,6 +114,12 @@
         const addBtn = document.getElementById('addBtn');
         const list = document.getElementById("taskList");
 
+        addBtn.addEventListener('click', addTask);
+
+        input.addEventListener('keydown', (e)=>{
+            if(e.key=='Enter')addTask();
+        })
+
         function addTask() {
             let textInput = input.value.trim();
 
